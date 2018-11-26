@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace No2.Solution.Console
 {
     class Program
@@ -12,11 +7,12 @@ namespace No2.Solution.Console
         {
             var stock = new Stock();
 
-            var bank = new Bank("Bank", stock);
-            var broker = new Broker("Broker", stock);
+            var bank = new Bank("Bank");
+            bank.Register(stock);
 
-            stock.Register(bank);
-            stock.Register(broker);
+            var broker = new Broker("Broker");
+            broker.Register(stock);
+
             stock.Market();
 
             System.Console.ReadLine();

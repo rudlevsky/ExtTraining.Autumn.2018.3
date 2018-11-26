@@ -11,7 +11,7 @@ namespace No1.Solution.Tests
         {
             var service = new PasswordCheckerService(new SqlRepository());
 
-            (bool, string) result = service.VerifyPassword("Password123");
+         //   (bool, string) result = service.VerifyPassword("Password123");
         }
 
     }
