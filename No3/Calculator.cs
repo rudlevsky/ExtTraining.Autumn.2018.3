@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace No3
 {
+
     public class Calculator
     {
         public double CalculateAverage(List<double> values, AveragingMethod averagingMethod)
