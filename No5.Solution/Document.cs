@@ -9,18 +9,24 @@ namespace No5.Solution
 {
     // Использовать паттерн "Visitor"
 
-    public class Document
+    public class Document<T>
     {
-        private readonly List<Elements.Elements> partselem;
+        private readonly List<T> partselem;
         private readonly List<DocumentPart> parts;
 
-        public Document(IEnumerable<DocumentPart> parts)
+        public Document(List<DocumentPart> parts)
         {
             if (parts == null)
             {
                 throw new ArgumentNullException(nameof(parts));
             }
             this.parts = new List<DocumentPart>(parts);
+
+            /*for (int i = 0; i < parts.Count; i++)
+            {
+                partselem<T>.Add(parts[i]);
+            }*/
+
         }
 
         public string ToHtml()

@@ -7,11 +7,11 @@ using No5.Solution.Parts;
 
 namespace No5.Solution.Elements
 {
-    public class ElementHyperlink : Elements
+    public class ElementToLatex : Elements
     {
         public override string Accept(DocumentPart visitor)
         {
-            return visitor.ToHtml();
+            return visitor.ToLaTeX();
         }
     }
 }

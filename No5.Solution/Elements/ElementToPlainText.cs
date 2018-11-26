@@ -7,11 +7,11 @@ using No5.Solution.Parts;
 
 namespace No5.Solution.Elements
 {
-    public class ElementPlainText : Elements
+    public class ElementToPlainText : Elements
     {
         public override string Accept(DocumentPart visitor)
         {
-            throw new NotImplementedException();
+            return visitor.ToPlainText();
         }
     }
 }
